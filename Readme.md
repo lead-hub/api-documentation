@@ -196,7 +196,7 @@ Especificação dos campos
  | ProductColor                    | Cor do produto                                                              | string   | 50  |
  | ProductLicencePlate             | Placa ou Chassi do produto                                                  | string   | 80  |
  | ProductPrice                    | Preço do produto                                                            | string   | 50  |
- | Customer Name **(*)**                  | Nome do cliente                                                            | string   | 100  |
+ | CustomerName **(*)**                  | Nome do cliente                                                            | string   | 100  |
  | CustomerEmail  **(*)**                 | Email do cliente                                                            | string   | 100  |
  | CustomerPhone **(*)**                  | Telefone do cliente                                                         | string   | 27  |
  | CustomerMobilePhone             | Celular do cliente                                                          | string   |  27 |
