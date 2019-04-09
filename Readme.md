@@ -1,8 +1,8 @@
-# Documentação API do Leadhub
+# Documentação API do LeadHub
 
-Documentação para uso da API do Leadhub destinada a  parceiros e clientes.
+Documentação para uso da API do LeadHub destinada a  parceiros e clientes.
 
-Saiba mais sobre o Leadhub em [http://www.leadhub.com.br](http://www.leadhub.com.br)
+Saiba mais sobre o LeadHub em [https://www.leadhub.com.br](https://www.leadhub.com.br)
 
 ## Itens
 
@@ -190,7 +190,7 @@ Especificação dos campos
 | ProductType       **(*)**            | Tipo do produto (Para automotivo: 1 - Seminovo, 2 - Novo, 3 - Venda Direta  | inteiro  |   |
  | ProductBrandName                | Marca do produto                                                            | string   | 50  |
  | ProductModelName                | Modelo do produto                                                           | string   |  50 |
- | ProductFullName   **(*)**               | Nome completo do produto incluindo marca, modelo e versão                   | string   | 100  |
+ | ProductFullName                  | Nome completo do produto incluindo marca, modelo e versão                   | string   | 100  |
  | ProductModelYear                | Ano do modelo do produto                                                    | string   | 4  |
  | ProductManufactoringYear        | Ano de fabricação do produto                                                | string   | 4  |
  | ProductColor                    | Cor do produto                                                              | string   | 50  |
