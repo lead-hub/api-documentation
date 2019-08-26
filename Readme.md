@@ -1,6 +1,6 @@
-# Documenta��o API do LeadHub
+# Documentação API do LeadHub
 
-Documenta��o para uso da API do LeadHub destinada a  parceiros e clientes.
+Documentação para uso da API do LeadHub destinada a  parceiros e clientes.
 
 Saiba mais sobre o LeadHub em [https://www.leadhub.com.br](https://www.leadhub.com.br)
 
@@ -16,19 +16,19 @@ Saiba mais sobre o LeadHub em [https://www.leadhub.com.br](https://www.leadhub.c
 
 ## Tecnologia
 
-A API utiliza padr�o `REST`, utiliza estrutura `JSON` para envio e recebimento de dados e � de f�cil implementa��o em sua linguagem de programa��o preferida.
+A API utiliza padrão `REST`, utiliza estrutura `JSON` para envio e recebimento de dados e é de fácil implementação em sua linguagem de programação preferida.
 
 ### Endpoints
 
-Solicite ao *nosso time t�cnico* os endere�os correspontentes � �ltima vers�o da API
+Solicite ao *nosso time técnico* os endereços correspontentes à última versão da API
 
 ## Token
 
-A autentica��o � feita atrav�s de token `OAUTH` e todas as chamadas ser�o autenticadas com esse token. O token de acesso tem uma validade de 24 horas.
+A autenticação é feita através de token `OAUTH` e todas as chamadas serão autenticadas com esse token. O token de acesso tem uma validade de 24 horas.
 
-O usu�rio/senha utilizado no header em `Basic Authentication` � usado para validar a origem de integra��o, solicite o usu�rio e senha do seu ambiente ao *nosso time t�cnico*.
+O usuário/senha utilizado no header em `Basic Authentication` é usado para validar a origem de integração, solicite o usuário e senha do seu ambiente ao *nosso time técnico*.
 
-O usu�rio/senha utilizado no body em `grant_type` � usado para espeficar o `domain` em que os dados ser�o integrados.
+O usuário/senha utilizado no body em `grant_type` é usado para espeficar o `domain` em que os dados serão integrados.
 
 ### Request
 
@@ -153,7 +153,7 @@ Authorization = Bearer sk3bnOJVGQy7LTECXLE_tfCXc8XFeppOL4qoomMBVzCpVjH4ifgFNX064
 Exemplo:
 ```json
 {
-    "LeadSource_Name": "Webmotors",
+    "LeadSource_Name": "Chat",
     "CompanyName": "Grupo vNext",
     "DealerName": "Ford vNext",
     "DealerStoreName": "Ford vNext Perdizes",
@@ -170,32 +170,32 @@ Exemplo:
     "CustomerEmail": "customeremail@gmail.com",
     "CustomerPhone": "11 5555 5555",
     "CustomerMobilePhone": "11 9 9999 9999",
-    "CustomerCity": "S�o Paulo",
+    "CustomerCity": "São Paulo",
     "CustomerState": "SP",
     "CustomerFiscalDocument":"299.299.299-99",
     "CustomerMessage": "Customer message and other informations"
 }
 ```
 
-Especifica��o dos campos
+Especificação dos campos
 
 > **(*)**  Campos obrigat�rios
 
- | Campo                        | Descri��o                                                                   | Tipo     | Limite de caracteres|
+ | Campo                        | Descrição                                                                   | Tipo     | Limite de caracteres|
  |-----------------------------    |---------------------------------------------------------------------------- |----------|---------------------|
  | LeadSource_Name                 | Origem do lead                                                              | string   | 100  |
- | CompanyName   **(*)**               | Organiza��o ou nome do grupo                                                | string   | 100   |
- | DealerName     **(*)**              | Concessin�ria escolhida pelo cliente                                        | string   |  100  |
+ | CompanyName   **(*)**               | Organização ou nome do grupo                                                | string   | 100   |
+ | DealerName     **(*)**              | Concessinária escolhida pelo cliente                                        | string   |  100  |
 | DealerStoreName    **(*)**           | Loja escolhida pelo cliente                                                 | string   | 100  |
 | ProductType       **(*)**            | Tipo do produto (Para automotivo: 1 - Seminovo, 2 - Novo, 3 - Venda Direta  | inteiro  |   |
  | ProductBrandName                | Marca do produto                                                            | string   | 50  |
  | ProductModelName                | Modelo do produto                                                           | string   |  50 |
- | ProductFullName                  | Nome completo do produto incluindo marca, modelo e vers�o                   | string   | 100  |
+ | ProductFullName                  | Nome completo do produto incluindo marca, modelo e versão                   | string   | 100  |
  | ProductModelYear                | Ano do modelo do produto                                                    | string   | 4  |
- | ProductManufactoringYear        | Ano de fabrica��o do produto                                                | string   | 4  |
+ | ProductManufactoringYear        | Ano de fabricação do produto                                                | string   | 4  |
  | ProductColor                    | Cor do produto                                                              | string   | 50  |
  | ProductLicencePlate             | Placa ou Chassi do produto                                                  | string   | 80  |
- | ProductPrice                    | Pre�o do produto                                                            | string   | 50  |
+ | ProductPrice                    | Preço do produto                                                            | string   | 50  |
  | CustomerName **(*)**                  | Nome do cliente                                                            | string   | 100  |
  | CustomerEmail  **(*)**                 | Email do cliente                                                            | string   | 100  |
  | CustomerPhone **(*)**                  | Telefone do cliente                                                         | string   | 27  |
@@ -221,7 +221,7 @@ Exemplo de retorno com sucesso:
 ```
 **Erro (Unauthorized: 401):**
 
-Exemplo de erro de token inv�lido ou expirado
+Exemplo de erro de token inválido ou expirado
 
 ```json
 {
@@ -231,7 +231,7 @@ Exemplo de erro de token inv�lido ou expirado
 
 **Erro de falha em algum campo obrigat�rio (BadRequest: 400):**
 
-Exemplo de retorno com algum erro de usu�rio/senha:
+Exemplo de retorno com algum erro de usuário/senha:
 
 ```json
 {
