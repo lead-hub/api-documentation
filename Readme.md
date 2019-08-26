@@ -77,9 +77,9 @@ Exemplo de retorno com sucesso:
 }
 ```
 
-**Erro de usu�rio/senha (BadRequest: 400):**
+**Erro de usuário/senha (BadRequest: 400):**
 
-Exemplo de retorno com algum erro de usu�rio/senha:
+Exemplo de retorno com algum erro de usuário/senha:
 
 ```json
 {
@@ -179,7 +179,7 @@ Exemplo:
 
 Especificação dos campos
 
-> **(*)**  Campos obrigat�rios
+> **(*)**  Campos obrigatórios
 
  | Campo                        | Descrição                                                                   | Tipo     | Limite de caracteres|
  |-----------------------------    |---------------------------------------------------------------------------- |----------|---------------------|
@@ -229,7 +229,7 @@ Exemplo de erro de token inválido ou expirado
 }
 ```
 
-**Erro de falha em algum campo obrigat�rio (BadRequest: 400):**
+**Erro de falha em algum campo obrigatório (BadRequest: 400):**
 
 Exemplo de retorno com algum erro de usuário/senha:
 
