@@ -34,7 +34,7 @@ O usuário/senha utilizado no body em `grant_type` é usado para espeficar o `do
 
 **Url:** 
 ```
-http://{endpoint}/api/token
+http://{endpoint}/token
 ```
 
 **Method:**
@@ -58,7 +58,6 @@ password = {client_password in Base64 format}
 ```
 Exemplo:
 ```
-grant_type = password
 username = dXNlcg==
 password = cGFzc3dvcmQ=
 ```
@@ -105,7 +104,7 @@ Permite o envio de leads
 
 **Url:** 
 ```
-http://{endpoint}/api/lead
+http://{endpoint}/lead
 ```
 
 **Method:**
