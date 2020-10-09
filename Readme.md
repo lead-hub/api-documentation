@@ -172,7 +172,12 @@ Exemplo:
     "CustomerCity": "São Paulo",
     "CustomerState": "SP",
     "CustomerFiscalDocument":"299.299.299-99",
-    "CustomerMessage": "Customer message and other informations"
+    "CustomerMessage": "Customer message and other informations",
+    "SellerName": "string",
+    "SellerEmail": "string",
+    "SellerIdErp": "string",
+    "SellerStore": "string",
+    "SellerNotes": "string"
 }
 ```
 
@@ -203,6 +208,11 @@ Especificação dos campos
  | CustomerState                   | Estado do cliente                                                           | string   | 50  |
  | CustomerFiscalDocument          | CPF ou CNPJ do cliente                                                      | string   | 30  |
  | CustomerMessage                 | Mensagem do cliente                                                         | string   | 4000  |
+ | SellerName          | Nome do vendedor que atende o lead                                                     | string   | 30  |
+ | SellerEmail          | Email do vendedor que atende o lead                                                     | string   | 30  |
+ | SellerIdErp          | Código do vendedor que atende o lead                                                     | string   | 30  |
+ | SellerStore          | Loja do vendedor que atende o lead                                                     | string   | 30  |
+ | SellerNotes          | Observações sober o vendedor que atende o lead                                                     | string   | 30  |
 
 ### Responses
 
