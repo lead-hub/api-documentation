@@ -146,7 +146,12 @@ Authorization = Bearer sk3bnOJVGQy7LTECXLE_tfCXc8XFeppOL4qoomMBVzCpVjH4ifgFNX064
     "CustomerCity": "",
     "CustomerState": "",
     "CustomerFiscalDocument": "",
-    "CustomerMessage": ""
+    "CustomerMessage": "",
+    "SellerName": "",
+    "SellerEmail": "",
+    "SellerIdErp": "",
+    "SellerStore": "",
+    "SellerNotes": ""
 }
 ```
 Exemplo:
@@ -173,11 +178,11 @@ Exemplo:
     "CustomerState": "SP",
     "CustomerFiscalDocument":"299.299.299-99",
     "CustomerMessage": "Customer message and other informations",
-    "SellerName": "string",
-    "SellerEmail": "string",
-    "SellerIdErp": "string",
-    "SellerStore": "string",
-    "SellerNotes": "string"
+    "SellerName": "Nome do vendedor",
+    "SellerEmail": "emaildovendedor@mailserver.com",
+    "SellerIdErp": "Código do vendedor",
+    "SellerStore": "Loja do vendedor",
+    "SellerNotes": "Observações sobre o vendedor"
 }
 ```
 
