@@ -180,7 +180,7 @@ Exemplo:
     "CustomerMessage": "Customer message and other informations",
     "SellerName": "Nome do vendedor",
     "SellerEmail": "emaildovendedor@mailserver.com",
-    "SellerIdErp": "Código do vendedor",
+    "SellerErpId": "Código do vendedor no ERP",
     "SellerStore": "Loja do vendedor",
     "SellerNotes": "Observações sobre o vendedor"
 }
@@ -215,7 +215,7 @@ Especificação dos campos
  | CustomerMessage                 | Mensagem do cliente                                                         | string   | 4000  |
  | SellerName          | Nome do vendedor que atende o lead                                                     | string   | 30  |
  | SellerEmail          | Email do vendedor que atende o lead                                                     | string   | 30  |
- | SellerIdErp          | Código do vendedor que atende o lead                                                     | string   | 30  |
+ | SellerErpId          | Código do vendedor (ERP) que atende o lead                                                     | string   | 30  |
  | SellerStore          | Loja do vendedor que atende o lead                                                     | string   | 30  |
  | SellerNotes          | Observações sober o vendedor que atende o lead                                                     | string   | 30  |
 
