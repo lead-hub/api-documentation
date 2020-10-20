@@ -149,7 +149,7 @@ Authorization = Bearer sk3bnOJVGQy7LTECXLE_tfCXc8XFeppOL4qoomMBVzCpVjH4ifgFNX064
     "CustomerMessage": "",
     "SellerName": "",
     "SellerEmail": "",
-    "SellerIdErp": "",
+    "SellerErpId": "",
     "SellerStore": "",
     "SellerNotes": ""
 }
