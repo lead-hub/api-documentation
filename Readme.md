@@ -151,7 +151,11 @@ Authorization = Bearer sk3bnOJVGQy7LTECXLE_tfCXc8XFeppOL4qoomMBVzCpVjH4ifgFNX064
     "SellerEmail": "",
     "SellerErpId": "",
     "SellerStore": "",
-    "SellerNotes": ""
+    "SellerNotes": "",
+    "ChannelName": "",
+    "PrivacyPolicyAccepted" : true,
+    "MarketingContact": "",
+    "MarketingContactPreferences": ""
 }
 ```
 Exemplo:
@@ -182,7 +186,11 @@ Exemplo:
     "SellerEmail": "emaildovendedor@mailserver.com",
     "SellerErpId": "Código do vendedor no ERP",
     "SellerStore": "Loja do vendedor",
-    "SellerNotes": "Observações sobre o vendedor"
+    "SellerNotes": "Observações sobre o vendedor",
+    "ChannelName": "Internet",
+    "PrivacyPolicyAccepted" : true,
+    "MarketingContact": "optout",
+    "MarketingContactPreferences": "SMS,EMAIL,WHATSAPP"
 }
 ```
 
@@ -218,6 +226,10 @@ Especificação dos campos
  | SellerErpId          | Código do vendedor (ERP) que atende o lead                                                     | string   | 30  |
  | SellerStore          | Loja do vendedor que atende o lead                                                     | string   | 30  |
  | SellerNotes          | Observações sober o vendedor que atende o lead                                                     | string   | 30  |
+ | ChannelName          | Nome do canal do lead (entre em contato para obter nomes válidos)                       | string | 36 |
+ | PrivacyPolicyAccepted | Campo que indica o aceite à política de privacidade do canal/origem do lead  (valores válidos: true ou false)  | bool  | |
+ | MarketingContact     | Campo que indica o aceite aos contatos de marketing do canal/origem do lead (valores válidos: "optin" ou "optout")  | string  | 20  |
+ | MarketingContactPreferences  | Nome dos canais de marketing do canal/origem que o contato prefere usar separados por vírgula. Ex: SMS,EMAIL,WHATSAPP | 90 |
 
 ### Responses
 
