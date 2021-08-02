@@ -120,6 +120,8 @@ POST
 **Request Headers:**
 ```
 Authorization = Bearer {token gerado anteriormente em api/token}
+Content-Type = application/json
+
 ```
 
 Exemplo
