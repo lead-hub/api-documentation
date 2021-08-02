@@ -6,13 +6,16 @@ Saiba mais sobre o LeadHub em [https://www.leadhub.com.br](https://www.leadhub.c
 
 ## Itens
 
-1. [Tecnologia](#tecnologia)
-2. [Token](#token)
-   - [Request](#request)
-   - [Responses](#responses)
-3. [Leads](#leads)
-   - [Request](#request-1)
-   - [Responses](#responses-1)
+- [Documentação API do LeadHub](#documentação-api-do-leadhub)
+  - [Itens](#itens)
+  - [Tecnologia](#tecnologia)
+    - [Endpoints](#endpoints)
+  - [Token](#token)
+    - [Request](#request)
+    - [Responses](#responses)
+  - [Leads](#leads)
+    - [Request](#request-1)
+    - [Responses](#responses-1)
 
 ## Tecnologia
 
@@ -45,6 +48,8 @@ POST
 **Request Headers:**
 ```
 Authorization = Basic {api_user:api_password pair in Base64 format}
+Content-Type = application/x-www-form-urlencoded
+
 ```
 Exemplo:
 ```
