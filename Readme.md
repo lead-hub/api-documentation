@@ -15,6 +15,8 @@ Saiba mais sobre o LeadHub em [https://www.leadhub.com.br](https://www.leadhub.c
     - [Responses](#responses)
   - [Leads](#leads)
     - [Request](#request-1)
+    - [Especificação dos campos](#especificação-dos-campos)
+    - [Tipos de Produtos](#tipos-de-produtos)
     - [Responses](#responses-1)
 
 ## Tecnologia
@@ -201,7 +203,7 @@ Exemplo:
 }
 ```
 
-Especificação dos campos
+### Especificação dos campos
 
 > **(*)**  Campos obrigatórios
 
@@ -211,7 +213,7 @@ Especificação dos campos
  | CompanyName   **(*)**               | Organização ou nome do grupo                                                | string   | 100   |
  | DealerName     **(*)**              | Concessinária escolhida pelo cliente                                        | string   |  100  |
 | DealerStoreName    **(*)**           | Loja escolhida pelo cliente                                                 | string   | 100  |
-| ProductType       **(*)**            | Tipo do produto (Para automotivo: 1 - Seminovo, 2 - Novo, 3 - Venda Direta  | inteiro  |   |
+| ProductType       **(*)**            | Tipo do produto (veja tabela [Tipos de Produtos](#tipos-de-produtos))                         | integer  |   |
  | ProductBrandName                | Marca do produto                                                            | string   | 50  |
  | ProductModelName                | Modelo do produto                                                           | string   |  50 |
  | ProductFullName                  | Nome completo do produto incluindo marca, modelo e versão                   | string   | 100  |
@@ -237,6 +239,22 @@ Especificação dos campos
  | PrivacyPolicyAccepted | Campo que indica o aceite à política de privacidade do canal/origem do lead  (valores válidos: true ou false)  | bool  | |
  | MarketingContact     | Campo que indica o aceite aos contatos de marketing do canal/origem do lead (valores válidos: "optin" ou "optout")  | string  | 20  |
  | MarketingContactPreferences  | Nome dos canais de marketing do canal/origem que o contato prefere usar separados por vírgula. Ex: SMS,EMAIL,WHATSAPP | 90 |
+
+
+### Tipos de Produtos
+
+Campo **ProductType** do tipo **integer** obrigatório, envie o valor adequado ao tipo de produto do lead conforme a tabela abaixo:
+
+| Valor | Descrição |
+|-------|-----------|
+|1      |Seminovo / Usado|
+|2      |Novo / Zero KM|
+|3      |Venda Direta  |
+|4      |Serviços	  |
+|5      |Peças e acessórios|  
+|6      |Seguros        |
+|7      |Consórcio      |
+|8      |Carro por assinatura| 
 
 ### Responses
 
