@@ -18,6 +18,9 @@ Saiba mais sobre o LeadHub em [https://www.leadhub.com.br](https://www.leadhub.c
     - [Especificação dos campos](#especificação-dos-campos)
     - [Tipos de Produtos](#tipos-de-produtos)
     - [Responses](#responses-1)
+ - [LeadSource](#leadsource)
+ - [Dealer](#dealer)
+ - [DealerStore](#dealerstore)
 
 ## Tecnologia
 
@@ -102,6 +105,7 @@ Exemplo de erro na estrutura do request
   "error": "unsupported_grant_type"
 }
 ```
+_______
 
 ## Leads
 
@@ -207,16 +211,16 @@ Exemplo:
 
 > **(*)**  Campos obrigatórios
 
- | Campo                        | Descrição                                                                   | Tipo     | Limite de caracteres|
- |-----------------------------    |---------------------------------------------------------------------------- |----------|---------------------|
- | LeadSource_Name                 | Origem do lead                                                              | string   | 100  |
- | CompanyName   **(*)**               | Organização ou nome do grupo                                                | string   | 100   |
- | DealerName     **(*)**              | Concessinária escolhida pelo cliente                                        | string   |  100  |
-| DealerStoreName    **(*)**           | Loja escolhida pelo cliente                                                 | string   | 100  |
-| ProductType       **(*)**            | Tipo do produto (veja tabela [Tipos de Produtos](#tipos-de-produtos))                         | integer  |   |
- | ProductBrandName                | Marca do produto                                                            | string   | 50  |
- | ProductModelName                | Modelo do produto                                                           | string   |  50 |
- | ProductFullName                  | Nome completo do produto incluindo marca, modelo e versão                   | string   | 100  |
+ | Campo                        | Descrição                                                                             | Tipo     | Limite de caracteres|
+ |-----------------------------    |----------------------------------------------------------------------------------- |----------|---------------------|
+ | LeadSource_Name   **(*)**           | Origem do lead       (consulte [LeadSource (get)](#leadsource)            | string   | 100  |
+ | CompanyName   **(*)**               | Organização ou nome do grupo                                                   | string   | 100  |
+ | DealerName     **(*)**              | Concessionária escolhida pelo cliente (consulte [Dealer (get)](#dealer)   | string   | 100  |
+ | DealerStoreName    **(*)**          | Loja escolhida pelo cliente (consulte [DealerStore (get)](#dealerstore))  | string   | 100  |
+ | ProductType       **(*)**           | Tipo do produto (consulte a tabela [Tipos de Produtos](#tipos-de-produtos))    | integer  |   |
+ | ProductBrandName                    | Marca do produto                                                            | string   | 50  |
+ | ProductModelName                    | Modelo do produto                                                           | string   |  50 |
+ | ProductFullName                     | Nome completo do produto incluindo marca, modelo e versão                   | string   | 100  |
  | ProductModelYear                | Ano do modelo do produto                                                    | string   | 4  |
  | ProductManufactoringYear        | Ano de fabricação do produto                                                | string   | 4  |
  | ProductColor                    | Cor do produto                                                              | string   | 50  |
@@ -292,3 +296,183 @@ Exemplo de retorno com algum erro de usuário/senha:
     "apiType": "ModelIsNull"
 }
 ```
+_______
+
+
+## LeadSource
+
+Consulta das **origens** de leads permitidas. Retorna uma lista de *LeadSources* que são usadas para criar leads (campo **LeadSource_Name**)
+
+### Request
+
+**Url:** 
+```
+http://{endpoint}/leadsource/list
+```
+
+**Method:**
+```
+GET
+```
+
+**Request Headers:**
+```
+Authorization = Bearer {token gerado anteriormente em api/token}
+Content-Type = application/json
+
+```
+
+
+**Sucesso (OK: 200):**
+
+Exemplo de retorno com sucesso:
+```json
+[
+    {
+        "id": 1,
+        "name": "Webmotors"
+    },
+    {
+        "id": 2,
+        "name": "iCarros"
+    },
+    {
+        "id": 3,
+        "name": "Mercado Livre"
+    }
+    //...
+]
+```
+**Erro (Unauthorized: 401):**
+
+Exemplo de erro de token inválido ou expirado
+
+```json
+{
+    "message": "Authorization has been denied for this request."
+}
+```
+
+_______
+
+## Dealer
+
+Consulta das **concessionarias (marcas)** permitidas. Retorna uma lista de *Dealers* que são usadas para criar leads (campo **DealerName**)
+
+### Request
+
+**Url:** 
+```
+http://{endpoint}/dealer/list
+```
+
+**Method:**
+```
+GET
+```
+
+**Request Headers:**
+```
+Authorization = Bearer {token gerado anteriormente em api/token}
+Content-Type = application/json
+
+```
+
+
+**Sucesso (OK: 200):**
+
+Exemplo de retorno com sucesso:
+```json
+[
+    {
+        "id": 1,
+        "company_Id": 27,
+        "name": "Turing",
+        "brandName": "Jaguar"
+    },
+    {
+        "id": 2,
+        "company_Id": 27,
+        "name": "Turing",
+        "brandName": "Aston Martin"
+    }
+    //...
+]
+```
+**Erro (Unauthorized: 401):**
+
+Exemplo de erro de token inválido ou expirado
+
+```json
+{
+    "message": "Authorization has been denied for this request."
+}
+```
+
+______
+
+
+
+
+## DealerStore
+
+Consulta das **lojas** permitidas. Retorna uma lista de *DealerStores* de um *Dealer* (`dealer_id`) que são usadas para criar leads (campo **DealerStoreName**)
+
+### Request
+
+**Url:** 
+```
+http://{endpoint}/dealerstore/list/{dealer_id}
+```
+
+**Method:**
+```
+GET
+```
+
+**Request Headers:**
+```
+Authorization = Bearer {token gerado anteriormente em api/token}
+Content-Type = application/json
+
+```
+
+
+**Sucesso (OK: 200):**
+
+Exemplo de retorno com sucesso:
+```json
+[
+    {
+        "id": 1,
+        "dealer_Id": 1,
+        "company_Id": 27,
+        "nickName": "Turing Jaguar"
+    },
+    {
+        "id": 2,
+        "dealer_Id": 2,
+        "company_Id": 19,
+        "nickName": "Turing Aston Martin Curitiba"
+    },
+    {
+        "id": 2,
+        "dealer_Id": 2,
+        "company_Id": 19,
+        "nickName": "Turing Aston Martin Blumenau"
+    },
+    //...
+]
+```
+**Erro (Unauthorized: 401):**
+
+Exemplo de erro de token inválido ou expirado
+
+```json
+{
+    "message": "Authorization has been denied for this request."
+}
+```
+_______
+
+[Topo](#)
