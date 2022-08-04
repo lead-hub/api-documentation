@@ -214,7 +214,7 @@ Exemplo:
  | Campo                        | Descrição                                                                             | Tipo     | Limite de caracteres|
  |-----------------------------    |----------------------------------------------------------------------------------- |----------|---------------------|
  | LeadSource_Name   **(*)**           | Origem do lead       (consulte [LeadSource (get)](#leadsource)            | string   | 100  |
- | LeadSource_Category                 | Cagegoria ou sub-origem do lead                                          | string   | 100  |
+ | LeadSourceCategory_Name                 | Cagegoria ou sub-origem do lead                                          | string   | 100  |
  | CompanyName   **(*)**               | Organização ou nome do grupo                                                   | string   | 100  |
  | DealerName     **(*)**              | Concessionária escolhida pelo cliente (consulte [Dealer (get)](#dealer)   | string   | 100  |
  | DealerStoreName    **(*)**          | Loja escolhida pelo cliente (consulte [DealerStore (get)](#dealerstore))  | string   | 100  |
@@ -301,7 +301,7 @@ Exemplo de retorno com algum erro de usuário/senha:
 
 ## LeadSource
 
-Consulta das **origens** de leads permitidas. Retorna uma lista de *LeadSources* que são usadas para criar leads (campo **LeadSource_Name**)
+Consulta das **origens** de leads permitidas. Retorna uma lista de *LeadSources* que são usadas para criar leads (campo **LeadSource_Name**) incluindo suas **Cagetories** (campo **LeadSourceCategory_Name**)
 
 ### Request
 
@@ -330,15 +330,41 @@ Exemplo de retorno com sucesso:
 [
     {
         "id": 1,
-        "name": "Webmotors"
+        "name": "Webmotors",
+        "categories": [
+            {
+                "id": 11,
+                "name": "Webmotors Proposta"
+            },
+            {
+                "id": 12,
+                "name": "Webmotors Financiamento"
+            }
+        ]
     },
     {
         "id": 2,
-        "name": "iCarros"
+        "name": "iCarros",
+        "categories": [
+            {
+                "id": 21,
+                "name": "iCarros Proposta"
+            },
+            {
+                "id": 22,
+                "name": "iCarros Financiamento"
+            }
+        ]
     },
     {
         "id": 3,
-        "name": "Mercado Livre"
+        "name": "Mercado Livre",
+        "categories": [
+            {
+                "id": 31,
+                "name": "Mercado Livre Pergunta"
+            }
+        ]
     }
 ]
 ```
