@@ -213,11 +213,11 @@ Exemplo:
 
  | Campo                        | Descrição                                                                             | Tipo     | Limite de caracteres|
  |-----------------------------    |----------------------------------------------------------------------------------- |----------|---------------------|
- | LeadSource_Name   **(*)**           | Origem do lead       (consulte [LeadSource (get)](#leadsource)            | string   | 100  |
+ | LeadSource_Name   **(*)**           | Origem do lead       (consulte [LeadSource (get)](#leadsource))            | string   | 100  |
  | LeadSourceCategory_Name                 | Cagegoria ou sub-origem do lead                                          | string   | 100  |
  | CompanyName   **(*)**               | Organização ou nome do grupo                                                   | string   | 100  |
- | DealerName     **(*)**              | Concessionária escolhida pelo cliente (consulte [Dealer (get)](#dealer)   | string   | 100  |
- | DealerStoreName    **(*)**          | Loja escolhida pelo cliente (consulte [DealerStore (get)](#dealerstore))  | string   | 100  |
+ | DealerName     **(*)**              | Concessionária escolhida pelo cliente (consulte [Dealer (get)](#dealer))   | string   | 100  |
+ | DealerStoreName    **(*)**          | Loja escolhida pelo cliente (consulte [DealerStore (get)](#dealerstore))     | string   | 100  |
  | ProductType       **(*)**           | Tipo do produto (consulte a tabela [Tipos de Produtos](#tipos-de-produtos))    | integer  |   |
  | ProductBrandName                    | Marca do produto                                                            | string   | 50  |
  | ProductModelName                    | Modelo do produto                                                           | string   |  50 |
