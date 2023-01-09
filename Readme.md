@@ -165,6 +165,7 @@ Authorization = Bearer sk3bnOJVGQy7LTECXLE_tfCXc8XFeppOL4qoomMBVzCpVjH4ifgFNX064
     "SellerErpId": "",
     "SellerStore": "",
     "SellerNotes": "",
+    "SellerFiscalDocument":"",
     "ChannelName": "",
     "PrivacyPolicyAccepted" : true,
     "MarketingContact": "",
@@ -200,6 +201,7 @@ Exemplo:
     "SellerErpId": "Código do vendedor no ERP",
     "SellerStore": "Loja do vendedor",
     "SellerNotes": "Observações sobre o vendedor",
+    "SellerFiscalDocument":"999999999977",
     "ChannelName": "Internet",
     "PrivacyPolicyAccepted" : true,
     "MarketingContact": "optout",
@@ -239,7 +241,8 @@ Exemplo:
  | SellerEmail          | Email do vendedor que atende o lead                                                     | string   | 30  |
  | SellerErpId          | Código do vendedor (ERP) que atende o lead                                                     | string   | 30  |
  | SellerStore          | Loja do vendedor que atende o lead                                                     | string   | 30  |
- | SellerNotes          | Observações sober o vendedor que atende o lead                                                     | string   | 30  |
+ | SellerNotes          | Observações sobre o vendedor que atende o lead                                                     | string   | 30  |
+ | SellerFiscalDocument | Documento fiscal do vendedor que atende o lead (CPF)                                                     | string   | 18  |
  | ChannelName          | Nome do canal do lead (entre em contato para obter nomes válidos)                       | string | 36 |
  | PrivacyPolicyAccepted | Campo que indica o aceite à política de privacidade do canal/origem do lead  (valores válidos: true ou false)  | bool  | |
  | MarketingContact     | Campo que indica o aceite aos contatos de marketing do canal/origem do lead (valores válidos: "optin" ou "optout")  | string  | 20  |
