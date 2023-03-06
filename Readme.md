@@ -194,7 +194,11 @@ Exemplo:
     "CustomerMobilePhone": "11 9 9999 9999",
     "CustomerCity": "São Paulo",
     "CustomerState": "SP",
-    "CustomerFiscalDocument":"299.299.299-99",
+    "CustomerRegion": "Grande São Paulo",
+    "CustomerIPAddress": "127.0.0.1",
+    "CustomerLatitude": "-23.4505519",
+    "CustomerLongiture": "-46.4197219",
+    "CustomerFiscalDocument":"29929929999",
     "CustomerMessage": "Customer message and other informations",
     "SellerName": "Nome do vendedor",
     "SellerEmail": "emaildovendedor@mailserver.com",
@@ -205,7 +209,14 @@ Exemplo:
     "ChannelName": "Internet",
     "PrivacyPolicyAccepted" : true,
     "MarketingContact": "optout",
-    "MarketingContactPreferences": "SMS,EMAIL,WHATSAPP"
+    "MarketingContactPreferences": "SMS,EMAIL,WHATSAPP",
+    "TrafficCampaign": "GOOGLE_AD_MAY_OFFERS",
+    "TrafficContent" : "logolink",
+    "TrafficMedium" : "cpc",
+    "TrafficSource" : "google",
+    "TrafficTerm" : "ofertas+de+maio",
+    "TrafficTrackingIdKey": "gclid",
+    "TrafficTrackingIdValue":"CsKCAiAu5agBhBzEiwAdiR5tJxhiZ9qQrmx7t6c5x7sedhtvytluiPR5ZhFgAldMIRPbhJB1JphoCa6IQAvD_BwE"
 }
 ```
 
@@ -233,8 +244,12 @@ Exemplo:
  | CustomerEmail  **(*)**                 | Email do cliente                                                            | string   | 100  |
  | CustomerPhone **(*)**                  | Telefone do cliente                                                         | string   | 27  |
  | CustomerMobilePhone             | Celular do cliente                                                          | string   |  27 |
- | CustomerCity                    | Cidade do cliente                                                           | string   |  100 |
- | CustomerState                   | Estado do cliente                                                           | string   | 50  |
+ | CustomerCity                    | Cidade do cliente                                                           | string   |  108 |
+ | CustomerState                   | Estado do cliente                                                           | string   | 5045  |
+ | CustomerRegion                   | Região do cliente                                                           | string   | 108  |
+ | CustomerIPAddress                   | Endereço IP do cliente                                                           | string   | 18  |
+ | CustomerLatitude                   | Latitude do cliente                                                           | string   | 27  |
+ | CustomerLongiture                   | Longitude do cliente                                                           | string   | 27  |
  | CustomerFiscalDocument          | CPF ou CNPJ do cliente                                                      | string   | 30  |
  | CustomerMessage                 | Mensagem do cliente                                                         | string   | 4000  |
  | SellerName          | Nome do vendedor que atende o lead                                                     | string   | 30  |
@@ -247,7 +262,13 @@ Exemplo:
  | PrivacyPolicyAccepted | Campo que indica o aceite à política de privacidade do canal/origem do lead  (valores válidos: true ou false)  | bool  | |
  | MarketingContact     | Campo que indica o aceite aos contatos de marketing do canal/origem do lead (valores válidos: "optin" ou "optout")  | string  | 20  |
  | MarketingContactPreferences  | Nome dos canais de marketing do canal/origem que o contato prefere usar separados por vírgula. Ex: SMS,EMAIL,WHATSAPP | 90 |
-
+ | TrafficCampaign          | Nome da campanha ou promoção (utm_campaign)                       | string | 270 |
+ | TrafficContent          | Identificador do local clicado que levou o cliente ao site (utm_content)                       | string | 90 |
+ | TrafficMedium          | Identificador do tipo de link que foi utilizado (utm_medium)                      | string | 90 |
+ | TrafficSource          | Identificador da origem do tráfego (utm_source)                       | string | 90 |
+ | TrafficTerm          | Identificador dos termos pesquisados (utm_term)                       | string | 180 |
+ | TrafficTrackingIdKey          | Nome do identificador de clique do canal de anúncios (ex.: gclid, fbid, igid)                       | string | 36 |
+ | TrafficTrackingIdValue          | Valor do identificador de clique do canal de anúncios                        | string | 540 |
 
 ### Tipos de Produtos
 
