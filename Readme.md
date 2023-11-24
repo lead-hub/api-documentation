@@ -324,9 +324,9 @@ Exemplo de retorno com erros em campos obrigatórios
 }
 ```
 
-**Erro nenhum dos campos de contato foram enviados (BadRequest: 400):**
+**Erro de campos de contato do lead ausentes (BadRequest: 400):**
 
-Exemplo de retorno com erros em todos os campos de contato do lead
+Exemplo de retorno com erros em todos os campos de contato
 
 ```json
 {
