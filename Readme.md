@@ -224,6 +224,8 @@ Exemplo:
 
 > **(*)**  Campos obrigatórios
 
+> **IMPORTANTE:** Um lead precisa ter ao menos um dos campos de contato preenchidos: CustomerEmail, CustomerPhone, CustomerMobilePhone
+
  | Campo                        | Descrição                                                                             | Tipo     | Limite de caracteres|
  |-----------------------------    |----------------------------------------------------------------------------------- |----------|---------------------|
  | LeadSource_Name   **(*)**           | Origem do lead       (consulte [LeadSource (get)](#leadsource))            | string   | 100  |
@@ -241,8 +243,8 @@ Exemplo:
  | ProductLicencePlate             | Placa ou Chassi do produto                                                  | string   | 80  |
  | ProductPrice                    | Preço do produto                                                            | string   | 50  |
  | CustomerName **(*)**                  | Nome do cliente                                                            | string   | 100  |
- | CustomerEmail  **(*)**                 | Email do cliente                                                            | string   | 100  |
- | CustomerPhone **(*)**                  | Telefone do cliente                                                         | string   | 27  |
+ | CustomerEmail                  | Email do cliente                                                            | string   | 100  |
+ | CustomerPhone                  | Telefone do cliente                                                         | string   | 27  |
  | CustomerMobilePhone             | Celular do cliente                                                          | string   |  27 |
  | CustomerCity                    | Cidade do cliente                                                           | string   |  108 |
  | CustomerState                   | Estado do cliente                                                           | string   | 5045  |
@@ -309,14 +311,27 @@ Exemplo de erro de token inválido ou expirado
 }
 ```
 
-**Erro de falha em algum campo obrigatório (BadRequest: 400):**
+**Erro de campo obrigatório (BadRequest: 400):**
 
-Exemplo de retorno com algum erro de usuário/senha:
+Exemplo de retorno com erros em campos obrigatórios
 
 ```json
 {
     "success": false,
-    "message": "<model.CustomerEmail: The CustomerEmail field is required.>",
+    "message": "<model.CustomerEmail: The CustomerName field is required.>",
+    "type": "error",
+    "apiType": "ModelIsNull"
+}
+```
+
+**Erro nenhum dos campos de contato foram enviados (BadRequest: 400):**
+
+Exemplo de retorno com erros em todos os campos de contato do lead
+
+```json
+{
+    "success": false,
+    "message": "<model.CustomerEmail: Lead with none contact information, please fill one of these fields correctly CustomerEmail, CustomerMobilePhone, CustomerPhone>",
     "type": "error",
     "apiType": "ModelIsNull"
 }
